@@ -1,1 +1,3 @@
+Ảnh in game
+![shooter2d](https://user-images.githubusercontent.com/62213260/123568672-04a4d900-d7ef-11eb-85bd-d508953d9e37.png)
 
