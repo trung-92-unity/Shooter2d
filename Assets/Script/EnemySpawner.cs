@@ -5,18 +5,12 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    /// <summary>
-    /// nhập vào list waveconfig
-    /// nhập giá trị của wave đầu tiên b
-    /// </summary>
+    
     [SerializeField] List<WaveConfig> waveConfigs;
     [SerializeField] int startingWave = 0;
     
    
-    /// <summary>
-    /// 
-    /// </summary>
-    /// <returns></returns>
+    
     void Start()
     {
         
@@ -25,10 +19,7 @@ public class EnemySpawner : MonoBehaviour
 
     }
 
-    /// <summary>
-    /// 
-    /// </summary>
-    /// <returns></returns>
+    
     private IEnumerator SpawnAllWaves()
     {
         for(int waveIndex = startingWave; waveIndex < waveConfigs.Count; waveIndex++ )
@@ -38,11 +29,7 @@ public class EnemySpawner : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// 
-    /// </summary>
-    /// <param name="waveConfig"></param>
-    /// <returns></returns>
+    
     private IEnumerator SpawnAllEnemiesInWave(WaveConfig waveConfig)
     {
         for (int enemyCount = 0; enemyCount < waveConfig.GetNumberEnemies(); enemyCount++)

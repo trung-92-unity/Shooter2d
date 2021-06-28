@@ -14,25 +14,19 @@ public class Player : MonoBehaviour
 
     Coroutine firingCorountine;//
 
-    /// <summary>
-    /// 
-    /// </summary>
+    
     float xMin;
     float xMax;
     float yMin;
     float yMax;
 
-    /// <summary>
-    /// 
-    /// </summary>
+    
     void Start()
     {
         setUpMoveBoundaries();
     }
 
-    /// <summary>
-    /// 
-    /// </summary>
+    
     void Update()
     {
         Move();
@@ -56,9 +50,7 @@ public class Player : MonoBehaviour
         Destroy(gameObject);
         
     }
-    /// <summary>
-    /// 
-    /// </summary>
+    
     private void Fire()
     {
         if (Input.GetButtonDown("Fire1"))
@@ -71,10 +63,7 @@ public class Player : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// 
-    /// </summary>
-    /// <returns></returns>
+    
     IEnumerator FireContinously()
     {
         while (true)
@@ -88,9 +77,7 @@ public class Player : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// 
-    /// </summary>
+    
     private void Move()
     {
         var deltaX = Input.GetAxis("Horizontal") * Time.deltaTime * moveSpeed;
@@ -101,9 +88,7 @@ public class Player : MonoBehaviour
         transform.position = new Vector2(newXpos, newYpos);
     }
 
-    /// <summary>
-    /// 
-    /// </summary>
+    
     private void setUpMoveBoundaries()
     {
         Camera gameCamera = Camera.main;
